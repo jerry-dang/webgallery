@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/form.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="js/login.mjs"></script>
+  </head>
+
+  <body>
+    <header>
+        <a href="/" id="title">Web Gallery</a>
+    </header>
+
+    <p id="error_box"></p>
+
+    <form class="sign-up-form">
+      <div class="container">
+        <input
+          type="text"
+          id="signup-username"
+          name="username"
+          class="signup-username-element"
+          placeholder="Enter a username"
+          required
+        />
+        <input
+          type="password"
+          id="signup-password"
+          name="password"
+          class="signup-password-element"
+          placeholder="Enter a password"
+          required
+        />
+        <div class="div">
+          <button id="signin" name="action" class="btn signup-btn">Sign in</button>
+          <button id="signup" name="action" class="btn signup-btn">Sign up</button>
+        </div>
+      </div>
+    </form>
+  
+    <footer>
+      <a href="/credits.html">credits</a>
+    </footer>
+  </body>
+</html>

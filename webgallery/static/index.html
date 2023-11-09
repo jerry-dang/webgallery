@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Web Gallery</title>
+        <link href="style/main.css" rel="stylesheet" type="text/css" />
+        <link href="style/form.css" rel="stylesheet" type="text/css" />
+        <link href="style/comments.css" rel="stylesheet" type="text/css" />
+        <script type="module" src="js/index.mjs"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/" id="title">Web Gallery</a>
+            <a href="/login.html" id="signin-button" class="toggle-button header_btn hidden"
+            >Sign in/Sign up</a>
+            <a href="/signout/" id="signout-button" class="toggle-button header_btn hidden"
+            >Sign out</a>
+        </header>
+
+        <p id="error_box"></p>
+
+        <div class="users-display" id="users-display"></div>
+
+        <div class="toggle-button-container">
+            <button class="toggle-button" id="image-toggle-button">Add Image</button>
+        </div>
+        <form class="add-image-form" id="create-image-form" action="/api/users/:id/images" method="POST" enctype="multipart/form-data">
+            <div class="container">
+                <input 
+                    type="text" 
+                    id="image-title"
+                    class="image-title-element"
+                    name="title"
+                    placeholder="Image Title" 
+                    required
+                />
+                <input 
+                    type="text" 
+                    id="author-name"
+                    class="author-element"
+                    name="author"
+                    placeholder="Author" 
+                    required
+                />
+                <input 
+                    type="file" 
+                    id="image-picture"
+                    name="picture" 
+                    class="image-element" 
+                    required 
+                />
+                <button type="submit" class="btn">Add Image</button>
+            </div>
+        </form>
+
+        <div class="image-display" id="image-display"></div>
+        
+        <div class="toggle-comments-container">
+            <button class="toggle-comments-button" id="toggle-comments">Leave a Comment</button>
+        </div>
+
+        <form class="comment-form" id="comments-form">
+            <!-- <input
+                type="text"
+                id="comment-author"
+                class="comment-username"
+                placeholder="Enter your name"
+                name="username"
+                required
+            /> -->
+            <textarea
+                rows="1"
+                id="post-content"
+                class="comment-message"
+                name="user-comment"
+                placeholder="Post your message"
+                required
+            ></textarea>
+            <button type="submit" class="btn">Post</button>
+        </form>
+
+        <div id="comments"></div>
+
+        <div class="navigate-comments">
+            <div class="left-arrow icon"></div>
+            <div class="right-arrow icon"></div>
+        </div>
+
+        <footer>
+            <a href="/credits.html">credits</a>
+        </footer>
+    </body>
+</html>
