@@ -34,4 +34,3 @@ In addition, access to the API is ruled by the following authorization policy:
 - Authenticated users can post comments on any picture of any gallery
 - Authenticated users can delete any one of their own comments but not others
 - Gallery owners can delete any comment on any picture from their own gallery
-- 
