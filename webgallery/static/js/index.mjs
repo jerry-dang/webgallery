@@ -119,10 +119,12 @@ function updateImages(userId, currentPage) {
             }
 
             const content = document.getElementById("comments-form");
+            console.log(content);
             if (button.style.display === "block") {
-              button.addEventListener("click", function (e) {
+              button.addEventListener("click", (e) => {
+                console.log("button has been clicked");
                 if (content.style.display === "none") {
-                  content.style.display = "flex";
+                  content.style.display = "block";
                 } else {
                   content.style.display = "none";
                 }
